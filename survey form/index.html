@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
+
+    <h1 id="title">Web development Survey Form</h1>
+    <p id="description">Thankyou for your time.</p>
+    <form id="survey-form" action="index.html" method="get">
+        <label for="name" id="name-label">
+        Name:<input type="text" id="name" required placeholder="Enter your name">
+        </label><br>
+        <label for="email" id="email-label">
+        Email:<input type="text" id="email" required placeholder="Enter your Email">
+        </label><br>
+        <label for="number" id="number-label">
+        Age:
+        <input type="number" id="number" min="10" max="80" placeholder="Enter your age">
+        </label><br>
+        <fieldset id="role">
+            <legend id="selectrole">Select your role: </legend>
+            <select name="role" id="dropdown" aria-placeholder="select any one">     
+                <option value="select">Select any one</option>
+                <option value="student">Student</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="postgraduate">Postgraduate</option>
+            </select><br>
+        </fieldset>
+        Gender:    
+        <label for="male"><input name="gender"type="radio" id="male">Male</label> 
+        <label for="female"><input name="gender" type="radio" id="female">Female</label>
+        <br><br>
+        <fieldset> 
+            <legend>What do you prefer ?</legend>
+            <label for="projects">
+                <input type="checkbox" value="frontend">Front-end Development. <br>
+                <input type="checkbox" value="backend">Back-end Development. <br>
+                <input type="checkbox" value="fullstack">Full Stack Development. <br>
+                <input type="checkbox" value="mobile">Mobile Development. <br>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Enter your Bio:</legend> <br>
+            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        </fieldset>
+        <button type="submit" id="submit" value="submit">Submit</button>  
+    </form>  
+    </form>
+</body>
+<script>
+    document.getElementById('submit').addEventListener('click', function() {
+  alert('Thankyou for submitting. We will get back to you soon!');
+});
+</script>
+</html>
